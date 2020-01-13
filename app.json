@@ -1,0 +1,30 @@
+{
+  "name": "FeedbackProject",
+  "displayName": "360° feedback app",
+  "expo": {
+    "name": "360° feedback app",
+    "slug": "360-feedback-app",
+    "description": "360° feedback app for students",
+    "ios": {
+      "bundleIdentifier": "com.feedback.feedbackProject"
+    },
+    "android": {
+      "package": "com.feedback.feedbackProject"
+    },
+    "privacy": "public",
+    "sdkVersion": "35.0.0",
+    "version": "1.0.0",
+    "entryPoint": "node_modules/expo/AppEntry.js",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F67F1A"
+    },
+    "githubUrl": "https://github.com/MitchBred/360-feedback-app",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  }
+}
