@@ -33,12 +33,4 @@ const HomeNavigator  = createStackNavigator({
   }
 );
 
-// const resetAction = StackActions.reset({
-//   index: 0,
-//   actions: [NavigationActions.navigate({ routeName: 'Profile' })],
-// });
-
-// this.props.navigation.dispatch(resetAction);
-
-
 export default createAppContainer(HomeNavigator);

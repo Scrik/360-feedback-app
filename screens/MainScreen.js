@@ -18,14 +18,14 @@ export default class LoginScreen extends React.Component {
         const username = await AsyncStorage.getItem('user');
         const password = await AsyncStorage.getItem('pass');
         
-        fetch('https://360feedback.tech/app/favorite_get.php?action=getall', {
+        fetch('https://360feedback.mitchellbreden.nl/app/favorite_get.php?action=getall', {
             method: 'post',
             headers: new Headers({
                 'Content-Type': 'application/x-www-form-urlencoded'
             }),
             body: 'username='+username+'&password='+password+'&rating=1'
             })
-            .then((res) => res.json())
+            .then((res) => res.text())
             .then((data) => {
                 data.forEach(element => {
                     index = questions.findIndex(x => x.id === element['id']);
@@ -41,8 +41,8 @@ export default class LoginScreen extends React.Component {
     };
 
     getQuestions = () => {
-        fetch('https://360feedback.tech/questions-json')
-        .then((response) => response.json())
+        fetch('https://360feedback.mitchellbreden.nl/questions-json')
+        .then((response) => response.text())
         .then((responseJson) => {
             // this.setState({
             //     isLoading: false,
