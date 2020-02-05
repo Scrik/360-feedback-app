@@ -28,7 +28,7 @@ export default class LoginScreen extends Component {
 
   static navigationOptions = {
     title: 'Login',
-    header:null
+    headerShown: false
   };
 
   loginPress = () =>{
