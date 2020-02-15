@@ -28,7 +28,7 @@ export default class HighScoresScreen extends React.Component {
         const username = await AsyncStorage.getItem('user');
         const password = await AsyncStorage.getItem('pass');
         
-        fetch('https://360feedback.tech/app/favorite_get.php?action=get', {
+        fetch('https://360feedback-app.mitchellbreden.nl/favorite_get.php?action=get', {
             method: 'post',
             headers: new Headers({
                 'Content-Type': 'application/x-www-form-urlencoded'

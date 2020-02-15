@@ -1,11 +1,24 @@
-import React, { Component } from 'react';
-import { StyleSheet, TextInput, View, TouchableOpacity, Image, Keyboard, AsyncStorage, Button, FlatList, Text, ActivityIndicator, Dimensions } from 'react-native';
+import React, {Component} from 'react';
+import {
+    StyleSheet,
+    TextInput,
+    View,
+    TouchableOpacity,
+    Image,
+    Keyboard,
+    AsyncStorage,
+    Button,
+    FlatList,
+    Text,
+    ActivityIndicator,
+    Dimensions
+} from 'react-native';
 
 import Carousel from 'react-native-snap-carousel';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Constants from "expo-constants";
 
-const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
+const {width: viewportWidth, height: viewportHeight} = Dimensions.get('window');
 
 export default class LoginScreen extends React.Component {
 
@@ -17,113 +30,111 @@ export default class LoginScreen extends React.Component {
     filledQuestions = async (questions) => {
         const username = await AsyncStorage.getItem('user');
         const password = await AsyncStorage.getItem('pass');
-        
-        fetch('https://360feedback.mitchellbreden.nl/app/favorite_get.php?action=getall', {
+
+        fetch('https://360feedback-app.mitchellbreden.nl/favorite_get.php?action=getall', {
             method: 'post',
             headers: new Headers({
                 'Content-Type': 'application/x-www-form-urlencoded'
             }),
-            body: 'username='+username+'&password='+password+'&rating=1'
-            })
+            body: 'username=' + username + '&password=' + password + '&rating=1'
+        })
             .then((res) => res.text())
             .then((data) => {
-                data.forEach(element => {
-                    index = questions.findIndex(x => x.id === element['id']);
-                    questions.splice(index, 1);
-                });
+                    data.forEach(function (element) {
+                        console.log(element);
+                        index = questions.findIndex(x => x.id === element['id']);
+                        questions.splice(index, 1);
+                    });
 
-                this.setState({
-                    isLoading: false,
-                    dataSource: questions,
-                });
-            }
-        );
+                    this.setState({
+                        isLoading: false,
+                        dataSource: questions,
+                    });
+                }
+            );
     };
 
     getQuestions = () => {
         fetch('https://360feedback.mitchellbreden.nl/questions-json')
-        .then((response) => response.text())
-        .then((responseJson) => {
-            // this.setState({
-            //     isLoading: false,
-            //     dataSource: responseJson,
-            // });
+            .then((response) => response.text())
+            .then((responseJson) => {
+                // this.setState({
+                //     isLoading: false,
+                //     dataSource: responseJson,
+                // });
 
-            this.filledQuestions(responseJson)
-        })
-        .catch((error) =>{
-            console.error(error);
-        }); 
-    }; 
+                this.filledQuestions(responseJson)
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
 
-    componentDidMount(){
+    componentDidMount() {
         this.getQuestions();
     }
-
 
     static navigationOptions = {
         header: null
     };
 
-    likePress = async (info) =>{
+    likePress = async (info) => {
         const username = await AsyncStorage.getItem('user');
         const password = await AsyncStorage.getItem('pass');
 
-        fetch('https://360feedback.tech/app/favorite.php?action=add', {
+        fetch('https://360feedback-app.mitchellbreden.nl/favorite.php?action=add', {
             method: 'post',
             headers: new Headers({
                 'Content-Type': 'application/x-www-form-urlencoded'
             }),
-            body: 'username='+username+'&password='+password+'&question='+info+'&rating=1'
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            if(data == 'Ok') {
-                
-            }
-            else {
-              Alert.alert('Oops er ging iets mis.');
-            }
-          });
-
-        this.getQuestions(); 
-    }
-
-    dislikePress = async (info) =>{
-        const username = await AsyncStorage.getItem('user');
-        const password = await AsyncStorage.getItem('pass');
-
-        fetch('https://360feedback.tech/app/favorite.php?action=add', {
-            method: 'post',
-            headers: new Headers({
-                'Content-Type': 'application/x-www-form-urlencoded'
-            }),
-            body: 'username='+username+'&password='+password+'&question='+info+'&rating=0'
+            body: 'username=' + username + '&password=' + password + '&question=' + info + '&rating=1'
         })
             .then((res) => res.json())
             .then((data) => {
-            if(data == 'Ok') {
-                // this.forceUpdate();
-                this.props.navigation.navigate('Main');
-            }
-            else {
-                Alert.alert('Oops er ging iets mis.');
-            }
+                if (data === 'Ok') {
+
+                } else {
+                    Alert.alert('Oops er ging iets mis.');
+                }
             });
 
-        this.getQuestions(); 
+        this.getQuestions();
+    };
+
+    dislikePress = async (info) => {
+        const username = await AsyncStorage.getItem('user');
+        const password = await AsyncStorage.getItem('pass');
+
+        fetch('https://360feedback-app.mitchellbreden.nl/favorite.php?action=add', {
+            method: 'post',
+            headers: new Headers({
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }),
+            body: 'username=' + username + '&password=' + password + '&question=' + info + '&rating=0'
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data === 'Ok') {
+                    // this.forceUpdate();
+                    this.props.navigation.navigate('Main');
+                } else {
+                    Alert.alert('Oops er ging iets mis.');
+                }
+            });
+
+        this.getQuestions();
     }
 
-    render(){
-        if(this.state.isLoading){
-            return(
+    render() {
+        if (this.state.isLoading) {
+            return (
                 <View style={[styles.containerActivityIndicator, styles.horizontal]}>
-                    <ActivityIndicator size="large" color="rgb(246, 127, 26)" />
+                    <ActivityIndicator size="large" color="rgb(246, 127, 26)"/>
                 </View>
             )
         }
 
-        return(
+        return (
             <View style={styles.container}>
 
                 <View style={styles.title}>
@@ -140,31 +151,31 @@ export default class LoginScreen extends React.Component {
                     data={this.state.dataSource}
                     renderItem={({item}) =>
 
-                    <View style={styles.container}>
-                        <Text style={styles.banner}>
-                            <Text style={styles.bannerText}>{item.category}</Text>
-                        </Text>
+                        <View style={styles.container}>
+                            <Text style={styles.banner}>
+                                <Text style={styles.bannerText}>{item.category}</Text>
+                            </Text>
 
-                        <View style={styles.home}>
-                            <Text style={styles.bannerText}>{item.question}</Text>
-                        </View>
+                            <View style={styles.home}>
+                                <Text style={styles.bannerText}>{item.question}</Text>
+                            </View>
 
-                        <View style={styles.bottom}>
-                            <View style={styles.horizontal}>
-                                <TouchableOpacity style={styles.like} onPress={() => this.likePress(item.id)}>
-                                    <Text>
-                                        <Icon name="thumbs-up" size={25} color="#ffffff" />
-                                    </Text>
-                                </TouchableOpacity>
+                            <View style={styles.bottom}>
+                                <View style={styles.horizontal}>
+                                    <TouchableOpacity style={styles.like} onPress={() => this.likePress(item.id)}>
+                                        <Text>
+                                            <Icon name="thumbs-up" size={25} color="#ffffff"/>
+                                        </Text>
+                                    </TouchableOpacity>
 
-                                <TouchableOpacity style={styles.dislike} onPress={() => this.dislikePress(item.id)}>
-                                    <Text>
-                                        <Icon name="thumbs-down" size={25} color="#ffffff" />
-                                    </Text>
-                                </TouchableOpacity>
+                                    <TouchableOpacity style={styles.dislike} onPress={() => this.dislikePress(item.id)}>
+                                        <Text>
+                                            <Icon name="thumbs-down" size={25} color="#ffffff"/>
+                                        </Text>
+                                    </TouchableOpacity>
+                                </View>
                             </View>
                         </View>
-                    </View>
 
                     }
                 />

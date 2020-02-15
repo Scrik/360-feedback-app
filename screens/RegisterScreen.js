@@ -20,7 +20,7 @@ export default class RegisterScreen extends React.Component {
     const {email, username, password} = this.state;
     // alert(username);
     Keyboard.dismiss();
-    fetch('https://360feedback.tech/app/register.php', {
+    fetch('https://360feedback-app.mitchellbreden.nl/register.php', {
         method: 'post',
         headers: new Headers({
             'Content-Type': 'application/x-www-form-urlencoded'
@@ -29,7 +29,7 @@ export default class RegisterScreen extends React.Component {
     })
       .then((res) => res.json())
       .then((data) => {
-        if(data == 'Ok') {
+        if(data === 'Ok') {
           _storeData = async () => {
             try {
               await AsyncStorage.setItem('user', username);

@@ -34,7 +34,7 @@ export default class LoginScreen extends Component {
   loginPress = () =>{
     const {username, password} = this.state;
     Keyboard.dismiss();
-    fetch('https://360feedback.mitchellbreden.nl/app/login.php', {
+    fetch('https://360feedback-app.mitchellbreden.nl/login.php', {
         method: 'post',
         headers: new Headers({
             'Content-Type': 'application/x-www-form-urlencoded'
