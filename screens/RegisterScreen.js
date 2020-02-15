@@ -37,19 +37,19 @@ export default class RegisterScreen extends React.Component {
             } catch (error) {
               // Error saving data
             }
-          }
+          };
           _storeData();
 
           this.props.navigation.navigate('Main');
         } 
-        else if(data = 'Exist') {
+        else if(data === 'Exist') {
           Alert.alert('Helaas bestaat deze gebruiker al :/');
         }
         else {
           Alert.alert('Ooops iets gaat er fout :/');
         }
       });
-  }
+  };
 
   render() {
     return (

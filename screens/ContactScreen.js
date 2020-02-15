@@ -1,47 +1,58 @@
-import React, { Component } from 'react';
-import { StyleSheet, TextInput, View, Image, Keyboard, AsyncStorage, Alert, ImageBackground, Text, TouchableOpacity, Platform } from 'react-native';
+import React, {Component} from 'react';
+import {
+    StyleSheet,
+    TextInput,
+    View,
+    Image,
+    Keyboard,
+    AsyncStorage,
+    Alert,
+    ImageBackground,
+    Text,
+    TouchableOpacity,
+    Platform
+} from 'react-native';
 import Constants from 'expo-constants';
 
 export default class ContactScreen extends React.Component {
-constructor(props) {
-    super(props);
-    this.state = {
-        name: '',
-        email: '',
-        note: ''
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            email: '',
+            note: ''
+        }
     }
-}
 
     mailPress = () => {
-        const {name,email,note} = this.state;
+        const {name, email, note} = this.state;
         // alert(username);
         Keyboard.dismiss();
-        fetch('https://360feedback.tech/app/mail.php', {
+        fetch('https://360feedback-app.mitchellbreden.nl/mail.php', {
             method: 'post',
             headers: new Headers({
                 'Content-Type': 'application/x-www-form-urlencoded'
             }),
-            body: 'name='+name+'&email='+email+'&note='+note
+            body: 'name=' + name + '&email=' + email + '&note=' + note
         })
             .then((res) => res.json())
             .then((data) => {
-                if(data == 'Ok') {
+                if (data === 'Ok') {
                     Alert.alert('Bericht is verstuurd');
-                }
-                else {
+                } else {
                     Alert.alert('Bericht kan niet verstuurd worden');
                 }
             });
     };
-render()
-{
-    return (
-        <View style={styles.container}>
+
+    render() {
+        return (
+            <View style={styles.container}>
                 <View style={{marginBottom: 100, alignItems: 'center'}}>
                     <Text style={styles.Title}>Contact</Text>
                     <TextInput style={styles.textInput}
-                        placeholder='Naam'
-                        onChangeText={name => this.setState({name})}
+                               placeholder='Naam'
+                               onChangeText={name => this.setState({name})}
                     />
 
                     <TextInput
@@ -56,16 +67,26 @@ render()
                         style={styles.textField}
                         includeFontPadding={false}
                         placeholder='Bericht'
-                        onSubmitEditing={()=>{Keyboard.dismiss()}}
+                        onSubmitEditing={() => {
+                            Keyboard.dismiss()
+                        }}
                         onChangeText={note => this.setState({note})}
                     />
 
-                    <TouchableOpacity style={{ backgroundColor: '#292D6C', width: '70%', marginTop: 18, borderRadius: 25 }} onPress={this.mailPress}>
-                        <Text style={{color: 'white', fontWeight: 'bold', fontSize: 20, textAlign: 'center', padding: 15}}>Verstuur</Text>
+                    <TouchableOpacity
+                        style={{backgroundColor: '#292D6C', width: '70%', marginTop: 18, borderRadius: 25}}
+                        onPress={this.mailPress}>
+                        <Text style={{
+                            color: 'white',
+                            fontWeight: 'bold',
+                            fontSize: 20,
+                            textAlign: 'center',
+                            padding: 15
+                        }}>Verstuur</Text>
                     </TouchableOpacity>
                 </View>
-        </View>
-    );
+            </View>
+        );
     }
 }
 
@@ -75,14 +96,14 @@ const styles = StyleSheet.create({
         marginTop: Constants.statusBarHeight,
         marginBottom: 100
     },
-    textInput:{
+    textInput: {
         width: '85%',
         height: '10%',
-        backgroundColor:'white',
+        backgroundColor: 'white',
         borderRadius: 25,
         shadowColor: '#aba8a5',
         padding: 7,
-        shadowOffset: { width: 0, height: 2 },
+        shadowOffset: {width: 0, height: 2},
         shadowOpacity: 0.5,
         shadowRadius: 3,
         marginVertical: 12,
@@ -96,13 +117,13 @@ const styles = StyleSheet.create({
             },
         })
     },
-    textField:{
+    textField: {
         width: '85%',
         height: '30%',
-        backgroundColor:'white',
+        backgroundColor: 'white',
         borderRadius: 25,
         shadowColor: '#aba8a5',
-        shadowOffset: { width: 0, height: 2 },
+        shadowOffset: {width: 0, height: 2},
         shadowOpacity: 0.5,
         padding: 7,
         shadowRadius: 3,
@@ -117,7 +138,7 @@ const styles = StyleSheet.create({
             },
         })
     },
-    Title:{
+    Title: {
         fontSize: 20,
         color: "#000000",
         fontWeight: 'bold',
