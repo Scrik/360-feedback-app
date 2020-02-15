@@ -56,12 +56,12 @@ export default class LoginScreen extends React.Component {
 
     getQuestions = () => {
         fetch('https://360feedback.mitchellbreden.nl/questions-json')
-            .then((response) => response.text())
+            .then((response) => response.json())
             .then((responseJson) => {
-                // this.setState({
-                //     isLoading: false,
-                //     dataSource: responseJson,
-                // });
+                this.setState({
+                    isLoading: false,
+                    dataSource: responseJson,
+                });
 
                 this.filledQuestions(responseJson)
             })
