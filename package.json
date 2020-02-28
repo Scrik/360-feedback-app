@@ -23,7 +23,7 @@
     "react-native-router-flux": "^4.2.0",
     "react-native-safe-area-context": "0.6.0",
     "react-native-safe-area-view": "^1.0.0",
-    "react-native-screens": "2.1.0",
+    "react-native-screens": "2.2.0",
     "react-native-snap-carousel": "^3.8.4",
     "react-native-status-bar-height": "^2.4.0",
     "react-native-unimodules": "0.7.0",

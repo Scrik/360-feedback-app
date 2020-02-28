@@ -11963,10 +11963,10 @@ react-native-safe-area-view@^1.0.0:
   dependencies:
     hoist-non-react-statics "^2.3.1"
 
-react-native-screens@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-2.1.0.tgz#d78f071ba03ac27635a10016500ccd04f5ac0628"
-  integrity sha512-BkG9cDrCehkZhLtJ68N/52KcTwdWbr/g8cIiZpBj5OnE/4BxVPEkHwdKNBrs90qLVkTAaj8CsSsF/zgco7Lq7Q==
+react-native-screens@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-2.2.0.tgz#cc4cdf17426fdda97ad93a5e812a1899390f1978"
+  integrity sha512-a0VzxOWot7F9B/GQyDSssBRd3jUJazFnTQS61IiyReWB6aHlFhf3Xz10jBRoURXy1EMCDCHgenmTVTkKHpKyqQ==
   dependencies:
     debounce "^1.2.0"
 
@@ -12720,14 +12720,6 @@ scheduler@0.15.0:
   version "0.15.0"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.15.0.tgz#6bfcf80ff850b280fed4aeecc6513bc0b4f17f8e"
   integrity sha512-xAefmSfN6jqAa7Kuq7LIJY0bwAPG3xlCj0HMEBQk1lxYiDKZscY2xJ5U/61ZTrYbmNQbXa+gc7czPkVo11tnCg==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-
-scheduler@^0.19.0:
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.19.0.tgz#a715d56302de403df742f4a9be11975b32f5698d"
-  integrity sha512-xowbVaTPe9r7y7RUejcK73/j8tt2jfiyTednOvHbA8JoClvMYCp+r8QegLwK/n8zWQAtZb1fFnER4XLBZXrCxA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
