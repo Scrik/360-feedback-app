@@ -11860,10 +11860,10 @@ react-native-router-flux@^4.2.0:
     react-navigation-tabs "^2.5.2"
     remove "^0.1.5"
 
-react-native-safe-area-context@0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-0.6.0.tgz#f53f5a5bcafb462a8798a26b145e68946389ad60"
-  integrity sha512-blY0akr3ZLTuZFdUotmjV+7LVXpBnd5CGFlNhTiarNNGJoHu79K42IJpUpmtg75iC9aWbSW7QHstlP0xz11V0A==
+react-native-safe-area-context@0.6.4:
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-0.6.4.tgz#624bd50cebc9f47853f179373501511931d2a0c3"
+  integrity sha512-xj8Mv8ZHfc8RquBgVYt+4+nOJaexTblLsQJpyx4Dh4qFUG+3QtbNlfOF7/ITj/qY5LNdlfafKoDsVgFz0WIU1w==
 
 react-native-safe-area-view@^0.14.6, react-native-safe-area-view@^0.14.8:
   version "0.14.8"
