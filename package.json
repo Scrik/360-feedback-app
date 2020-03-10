@@ -32,7 +32,7 @@
     "react-navigation": "^4.2.2",
     "react-navigation-stack": "^2.2.3",
     "react-navigation-tabs": "^2.8.2",
-    "ws": "^7.2.2"
+    "ws": "^7.2.3"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
