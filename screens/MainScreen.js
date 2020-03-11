@@ -157,7 +157,7 @@ export default class LoginScreen extends React.Component {
                             </Text>
 
                             <View style={styles.home}>
-                                <Text style={styles.bannerText}>{item.question}Testen</Text>
+                                <Text style={styles.bannerText}>{item.question}</Text>
                             </View>
 
                             <View style={styles.bottom}>
