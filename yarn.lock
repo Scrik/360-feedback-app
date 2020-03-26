@@ -13866,20 +13866,10 @@ react-navigation-stack@^2.3.6:
     color "^3.1.2"
     react-native-iphone-x-helper "^1.2.1"
 
-react-navigation-tabs@^2.5.2:
-  version "2.8.5"
-  resolved "https://registry.yarnpkg.com/react-navigation-tabs/-/react-navigation-tabs-2.8.5.tgz#ff7db771f2fadd0a7c7f53a500f85bbd9ba6269b"
-  integrity sha512-UDj7uU2bqFddPKRl0DOgF2j5O61sE3FmiJk83qhSk7cp5E6q2EzOe7YSyffCa24BCXDkz257xG12RHYF6TeOnQ==
-  dependencies:
-    hoist-non-react-statics "^3.3.2"
-    react-lifecycles-compat "^3.0.4"
-    react-native-safe-area-view "^0.14.8"
-    react-native-tab-view "^2.11.0"
-
-react-navigation-tabs@^2.8.4:
-  version "2.8.6"
-  resolved "https://registry.yarnpkg.com/react-navigation-tabs/-/react-navigation-tabs-2.8.6.tgz#e36996166ee026ed5039585f838934e12dced3a5"
-  integrity sha512-da0uv+uDUYrQH7ChkVegZjLUaAuvUQfcAlv4vT2h8vCdZ4J16sK1mnoFcaDWE8eFplUi+QF1Z4NvHc5hWtS9pA==
+react-navigation-tabs@^2.5.2, react-navigation-tabs@^2.8.7:
+  version "2.8.7"
+  resolved "https://registry.yarnpkg.com/react-navigation-tabs/-/react-navigation-tabs-2.8.7.tgz#cdcf1fd652afd04808e3aa19c1eb7445460a13ad"
+  integrity sha512-JhcNHA02vbwY/YXbgW04wtWKrG7Tlq8OREtFXVg2TiyDl7S4OGw89Aai6Y14e8kupM2jzYwCFEp+YMUn3B+bIQ==
   dependencies:
     hoist-non-react-statics "^3.3.2"
     react-lifecycles-compat "^3.0.4"
