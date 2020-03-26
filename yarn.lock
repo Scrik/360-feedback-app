@@ -2677,20 +2677,20 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/masked-view/-/masked-view-0.1.7.tgz#a65ce0702f55cb67fd777995de6fc7b3e5781903"
   integrity sha512-9KbP7LTLFz9dx1heURJbO6nuVMdSjDez8znlrUzaB1nUwKVsTTwlKRuHxGUYIIkReLWrJQeCv9tidy+84z2eCw==
 
-"@react-navigation/core@^3.7.0":
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-3.7.0.tgz#e184d1336c437828968917a21b06114c981b5035"
-  integrity sha512-2qoGxNYmmN2ybgQGHrer2hIpL0QUEFTcaWZ6sAQs2jpVW97hwVETQPDJR93F+oVT09ClJtRWdQjy49S6ejidDw==
+"@react-navigation/core@^3.7.1":
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-3.7.1.tgz#4dbb6a72ddb411e68f7918bc35db8f9f900fdaeb"
+  integrity sha512-4Kiq1JxBVPBEiIMIiCBjJDszwuMQpnnAZklb9pJ78Ccr1DxuCovykuLKiRTwaPmFtLu7aFaDS+/rA2rBtZg+ew==
   dependencies:
     hoist-non-react-statics "^3.3.2"
     path-to-regexp "^1.8.0"
     query-string "^6.11.1"
     react-is "^16.13.0"
 
-"@react-navigation/native@^3.7.6":
-  version "3.7.6"
-  resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-3.7.6.tgz#8a7d10218ba9e08744de49fb69c1c059f01137db"
-  integrity sha512-WXeaSWYoHVWtVyPkXXWaqu6v6JOMcuxR4+z2x85WpY6aYUf5za2e7N8WA2nglsqBJphijSHc6+TBh/IGMzBjUQ==
+"@react-navigation/native@^3.7.7":
+  version "3.7.7"
+  resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-3.7.7.tgz#288616d38c6cfc7fe3cc89aac901a5f6c38d0fa3"
+  integrity sha512-OJ+q3r3jrWhJeQkhljA8NrC4fnH+q5BpbyWqpLds+la0AfymnqQGqKnqn0CZyoGzlJKaQOm5h9YElEAPB7476Q==
   dependencies:
     hoist-non-react-statics "^3.3.2"
     react-native-safe-area-view "^0.14.8"
@@ -13886,13 +13886,13 @@ react-navigation-tabs@^2.8.4:
     react-native-safe-area-view "^0.14.8"
     react-native-tab-view "^2.11.0"
 
-react-navigation@^4.3.2, react-navigation@^4.x:
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-4.3.2.tgz#95e742b827a47c7bf380c7f2711cf1f58d302890"
-  integrity sha512-/F6aCVlBQkfQncYY5wJwXxOlJK4sXcCdg+n+nqWT8NCZFR+AZY/jSKwQrc5t6Wvg3eLllV2SyEGbabS7Fat7uQ==
+react-navigation@^4.3.3, react-navigation@^4.x:
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-4.3.3.tgz#537ea1a00a481ab6c1d3becc15fa50979263e4f2"
+  integrity sha512-JCeErqx9W9wIZT1HzKjJ3cFa4uSrv2o1NuB72/EKuMmbCPyObITdxY9y7xrTkgl5R+BdpHIyRZp/SU/3vWzsZw==
   dependencies:
-    "@react-navigation/core" "^3.7.0"
-    "@react-navigation/native" "^3.7.6"
+    "@react-navigation/core" "^3.7.1"
+    "@react-navigation/native" "^3.7.7"
 
 react-refresh@^0.4.0:
   version "0.4.2"
