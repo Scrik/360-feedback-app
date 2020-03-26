@@ -13720,10 +13720,10 @@ react-navigation-stack@^1.7.3:
   dependencies:
     prop-types "^15.7.2"
 
-react-navigation-stack@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/react-navigation-stack/-/react-navigation-stack-2.3.2.tgz#d6cabb1f9b2a6386398e9891ec0659a2be048ee6"
-  integrity sha512-GObgU4hMWqNkE2ncJMzBXRstX7UXIrC+hFl8nulcbR8YtFjEiszgjGqkth5C4pLRp70NSZbNCdiGi290LjFulA==
+react-navigation-stack@^2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/react-navigation-stack/-/react-navigation-stack-2.3.6.tgz#13598b9d828e74039427216f8fa18b15a561e73f"
+  integrity sha512-wEqjH3DKQ4hudrB6Sr3aKEQuuXInBy97D41/0MZj/PdexrwosMpHlW4othprLlzkksvaezjUEAk4BX6ewqeRQQ==
   dependencies:
     color "^3.1.2"
     react-native-iphone-x-helper "^1.2.1"
