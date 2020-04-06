@@ -14,7 +14,7 @@
     "expo-constants": "~8.0.0",
     "global": "^4.4.0",
     "mem": "6.0.1",
-    "react": "16.9.0",
+    "react": "^16.13.1",
     "react-dom": "16.9.0",
     "react-native": "0.61.4",
     "react-native-elements": "^1.2.7",
@@ -46,5 +46,10 @@
     "preset": "react-native"
   },
   "private": true,
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "name": "360-feedback-app",
+  "main": "index.js",
+  "repository": "git@github.com:MitchBred/360-feedback-app.git",
+  "author": "MitchBred <mail@mitchellbreden.nl>",
+  "license": "MIT"
 }

@@ -123,7 +123,7 @@ export default class LoginScreen extends React.Component {
             });
 
         this.getQuestions();
-    }
+    };
 
     render() {
         if (this.state.isLoading) {
